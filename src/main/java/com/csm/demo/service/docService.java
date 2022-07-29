@@ -9,7 +9,6 @@ import com.csm.demo.Model.Doc;
 
 public interface docService {
 	
-	public Doc saveFile(MultipartFile file); 
 	public Optional<Doc> getFile(Integer fileId);
 	public List<Doc> getFiles();
 
