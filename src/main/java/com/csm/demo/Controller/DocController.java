@@ -89,7 +89,7 @@ public class DocController {
 	public void downloadFile(@PathVariable Integer fileId, HttpServletResponse response) throws IOException {
 
 		Doc doc = service.getFile(fileId).get();
-		String path = docuploadpath + "/" + doc.getName();
+		String path = docuploadpath + File.separator + doc.getName();
 		File file = new File(path);
 		if(!file.exists()){
 			String errorMessage = "Sorry. The file you are looking for does not exist";
